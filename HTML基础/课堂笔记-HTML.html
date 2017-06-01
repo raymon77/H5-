@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>笔记</title>
+    <script>
+        document.write("<h1>This is a heading </h1>");
+        document.write("<p>This is a paragraph</p>");
+        x=document.getElementById("demo")
+        x.innerHTML="Hello Javascript";
+    </script>
+</head>
+<body>
+<!--
+1.假链接:
+格式:
+#:可以自动回到顶部
+javascript:不会回到顶部
+
+2.锚点：
+格式：
+<a href="#center">跳转到中部</a>
+<h2 id="center">我是中部</h2>
+通过a标签跳转到指定位置，是没有过渡动画
+3.列表标签
+-无序列表（最常用）
+-有序列表（最少用）
+-定义列表(其次)
+作用：
+-无序列表：给一堆数据添加列表语义，并且所有的数据都没有先后之分
+
+3.1格式：
+无序列表：
+<ul>
+    <li>需要显示的内容</li>
+</ul>
+3.2 注意点：
+ul和li是一个整体，一个组合，ul中不推荐包含除了li之外的其他标签，但是Li标签中可以放其他标签来丰富页面.
+3.3 应用场景：
+无序列表：->1.新闻列表->2.商品列表->3.导航条
+
+3.3 定义列表
+格式：
+<dl>
+    <dt></dt>
+    <dd></dd>
+</dl>
+应用场景：
+1.做网站尾部的相关信息
+2.图文混排
+
+4.表格标签
+4.1 格式：
+<table>
+    <tr>
+        <td>需要显示的内容</td>
+    </tr>
+</table>
+含义：
+table代表整个表格
+tr代表表格中的一行
+td代表一行中的一列
+注意点：
+表格标签里有一个边框属性，默认情况下这个属性的值是0，只要设置border大于1就可以了
+
+4.2 宽度和高度
+4.3 水平对齐和垂直对齐
+align控制水平对齐方式
+valign控制垂直对齐方式
+4.4 外边距和内边距
+只能给table标签使用
+cellspacing控制外边距，默认情况下单元格与单元格之间的外边距是2px
+cellpadding控制内边距，默认情况下内边距是1px.
+
+4.4 细线表格制作方式：
+-给table标签设置bgcolor
+-给tr标签设置bgcolor
+-给table标签设置cellspacing="1px"
+
+4.5表格标题：
+-caption专门用于设置表格的标题，只要将标题写在caption标签中，就可以使标题相对于表格居中
+-caption一定要写在table标签中，否则无效
+-caption一定要紧跟在table后面
+
+4.6 标题单元格标签
+-只要将当前列的标题存储在 th 标签中，就会自动居中+加粗文字.
+
+4.7 水平方向合并：<td colspan="2"></td>
+-单元格合并永远都是向后或者向下合并.
+4.8 垂直方向合并：<td rowspan="2"></td>
+
+-快速合并或展开代码：
+合并：ctrl + -
+展开：ctrl + +
+
+table>tr*4>td*3
+
+5.表单格式；
+<form>
+    <表单元素>
+</form>
+
+5.1 常见的表单元素
+-input标签,它有一个type属性，取值的不同决定了它的功能和外观
+type="text" -明文输入框
+type="password" -暗文输入框
+type="radio" name="xx" -单选框
+type="checkbox" checked="checked" -多选框
+type="submit" -提交按钮，如果需要提交数据给远程服务器，那么需要以下两个步骤：
+-先给form表单设置action="需要提交的远程服务器URL地址"
+-然后给需要提交的表单添加name属性
+type="reset" -重置/清空按钮
+
+6.lable标签
+作用：让输入框和文字绑定
+6.1 绑定格式：
+-将文字利用lable标签包裹起来
+-给输入框添加一个id属性
+-在lable标签中通过for属性和输入框中的id进行绑定即可.
+
+7.datalist标签
+作用：绑定待选列表，可以输入内容，并提供待选项
+-设定一个输入框
+-设置一个datalist列表
+-给待选列表添加一个id
+-给输入框添加list属性，将待选列表的id赋值给输入框即可.
+<datalist>
+    <option></option>
+</datalist>
+
+8.select标签-下拉列表
+<select>
+    <optgroup>
+        <option></option>
+    </optgroup>
+</select>
+-下拉列表不能输入内容，但是可以选中内容
+-可以通过selected="selected"属性来指定默认选项
+-可以通过给option标签包裹一层optgroup标签来给下拉列表中的数据分类
+
+9.textarea标签
+<textarea></textarea>
+-默认情况下输入框可以无限换行
+-默认情况下输入框有自己的宽度和高度
+-可以通过cols和rows来指定输入框的宽度和高度
+
+9.1 除了按钮类型的input标签以外，其他标签都可以通过value来指定值
+
+10.H5新增标签-video
+作用：播放视频
+<video src=""></video>
+outplay：用于告诉video是否需要自动播放视频
+controls：显示控制条
+poster：视频没播放前显示的占位图片
+loop：循环播放，一般用于广告视频
+preload：预加载视频，和autoplay相冲
+muted：静音
+width/height：只要设置一个，另一个会自动等比拉伸
+-第二种格式：
+<video>
+    <source src="url地址" type="video/mp4"></source>
+    <source src="" type=""></source>
+</video>
+-目前五大浏览器只支持三种视频格式
+mp4->webm->ogg
+
+11.audio标签
+audio和video标签的使用基本一样
+
+12.概要详情标签
+<details>
+    <summary>概要信息</summary>
+    详情信息..
+</details>
+
+13.marquee跑马灯
+格式：<marquee>内容</marquee>
+direction:设置滚动方向
+scrollamount:设置滚动速度
+loop:设置滚动次数，循环次数，默认是-1，也就是无限循环
+behavior:设置滚动类型,slide滚动到边界就停止，alternate滚到边界就弹回
+
+14.字符实体
+&nbsp;  空格
+&lt;  小于符号<
+&gt;  大于符号>
+&copy;  版权符号.
+
+! HTML只有一个作用，就是添加语义.
+
+-->
+
+
+
+<button type="button" onclick="alert('Welcome!')">点击这里</button>
+
+
+</body>
+</html>

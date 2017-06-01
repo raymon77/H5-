@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>29-表单标签2</title>
+</head>
+<body>
+
+<!--
+定义普通按钮
+可以通过value属性来给按钮指定标题
+作用: 配合JS完成一些操作
+-->
+<!--
+重置按钮
+作用: 用于清空表单中已经填写好的数据
+注意点:
+如果想想改重置按钮默认的按钮标题可以通过value属性来修改
+-->
+<!--
+    提交按钮
+    作用: 将表单中已经填写好的数据, 提交到远程服务器
+    注意点:
+    要想把表单中填写好的数据提交到远程服务器, 必须具备两个条件:
+    1.需要给form表单添加一个action的属性, 通过这个action属性指定需要提交到的服务器地址
+    2.需要给需要提交到服务器的表单元素添加一个name属性
+    -->
+<form action="http://www.jd.com">
+    账号：<input type="text" name="AA" id=""><br>
+    密码：<input type="password" name="BB" id="">
+    <br>
+    <input type="reset">
+    <input type="submit">
+    <input type="button" value="我是按钮">
+    <input type="image" src="images/register.jpg">
+
+    <!--
+   隐藏域
+   作用 : 配合提交按钮将一些数据默默的悄悄咪咪的提交到服务器
+   Ajax
+   -->
+    <input type="hidden" name="cc" value="aaa">
+</form>
+</body>
+</html>
