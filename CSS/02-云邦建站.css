@@ -1,0 +1,136 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+    margin:0;
+    padding:0;
+}
+*{
+    font-size: 13px;
+}
+.header{
+    width: 971px;
+    height: 90px;
+    /*background-color: red;*/
+    margin: 0 auto;
+}
+.header .logo{
+    margin-top: 15px;
+    float: left;
+}
+.header p{
+    float: right;
+    margin-top: 15px;
+}
+.header p a{
+    text-decoration: none;
+    color: red;
+}
+.content{
+    width: 1349px;
+    height: 423px;
+    /*background-color: orange;*/
+    margin: 0 auto;
+}
+.content .nav{
+    width: 1349px;
+    height: 40px;
+    background-color: #d81406;
+    /*background: url("images/yunbang/nav_line.png") repeat-x 0 0;*/
+}
+.content .nav li{
+    list-style: none;
+    float: left;
+    width: 124px;
+    line-height: 40px;
+    /*border: 1px solid #000;*/
+    text-align: center;
+    /*border-right: 1px solid #ed948e;*/
+    background: url("images/yunbang/nav_line.png") no-repeat right 0;
+}
+.content .nav li:first-child{
+    width: 80px;
+    margin-left: 218px;
+}
+.content .nav li:last-child{
+    border:none;
+}
+.content .nav li a{
+    text-decoration: none;
+    color: white;
+}
+.hot{
+    width: 961px;
+    height: 320px;
+    /*background-color: pink;*/
+    margin: 0 auto;
+    margin-top: 16px;
+}
+.hot .lalala{
+    text-align: center;
+    font-size: 18px;
+    /*padding: 10px;*/
+}
+.hot .hotTopA{
+    width: 961px;
+    height: 234px;
+    /*background-color: red;*/
+}
+.hot .hotTopA .aa{
+    width: 637px;
+    height: 234px;
+    /*background-color: blue;*/
+    float: left;
+}
+.hot .hotTopA .aa .xx{
+    width: 313px;
+    height: 234px;
+    /*background-color: #fff;*/
+    float: left;
+}
+.hot .hotTopA .aa .yy{
+    width: 313px;
+    height: 234px;
+    /*background-color: #fffc00;*/
+    float: right;
+}
+.hot .hotTopA  .qq{
+    width: 313px;
+    height: 36px;
+    line-height: 36px;
+    color: white;
+    text-indent:1em;
+    background: #a8a8a8 url("images/yunbang/arr.png") no-repeat right 0;
+}
+.hot .hotTopA .bb{
+    width: 313px;
+    height: 234px;
+    /*background-color: green;*/
+    float: right;
+}
+.hot .hotTopBottom{
+    width: 961px;
+    height: 70px;
+    line-height: 70px;
+}
+.hot .hotTopBottom span{
+    color: #d81406;
+    font-weight:bold;
+}
+.hot .hotTopBottom a{
+    text-decoration: none;
+    color: black;
+}
+.footer{
+    width: 1349px;
+    height: 68px;
+    background-color: #393631;
+    margin: 0 auto;
+    line-height: 30px;
+}
+.footer p{
+    padding-left: 194px;
+    font-size: 12px;
+    color: white;
+}
+.footer a{
+    text-decoration: none;
+    color: skyblue;
+}
